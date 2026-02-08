@@ -90,7 +90,7 @@ const WhatICanBuild = () => {
           Ready to build <span className="text-[#FF9900] font-semibold">reliable, scalable cloud infrastructure</span>?
         </p>
         <a href="#contact" className="aws-btn-primary inline-block">
-          Let's Talk
+          Let&apos;s Talk
         </a>
       </motion.div>
     </Section>

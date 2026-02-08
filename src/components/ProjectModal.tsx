@@ -21,16 +21,18 @@ interface ProjectModalProps {
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
-  if (!project) return null;
-
   // Close on Escape key
   React.useEffect(() => {
+    if (!project) return;
+    
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
     window.addEventListener("keydown", handleEscape);
     return () => window.removeEventListener("keydown", handleEscape);
-  }, [onClose]);
+  }, [project, onClose]);
+
+  if (!project) return null;
 
   return (
     <AnimatePresence>

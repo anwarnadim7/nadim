@@ -1,0 +1,45 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Nadim",
+  "jobTitle": "AWS Cloud Engineer",
+  "description": "AWS Cloud Engineer specializing in scalable, secure & cost-optimized cloud infrastructure",
+  "url": "https://nadim.in",
+  "sameAs": [
+    "https://github.com/yourusername",
+    "https://linkedin.com/in/yourprofile",
+    "https://twitter.com/yourusername"
+  ],
+  "knowsAbout": [
+    "AWS",
+    "Terraform",
+    "Docker",
+    "Kubernetes",
+    "DevOps",
+    "Cloud Infrastructure",
+    "Serverless Architecture",
+    "CI/CD",
+    "Infrastructure as Code"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "AWS Solutions Architect - Associate",
+      "credentialCategory": "certification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Amazon Web Services"
+      }
+    }
+  ],
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Your University",
+    "description": "MCA (Cloud Computing)"
+  },
+  "email": "contact@nadim.in",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN"
+  }
+}
