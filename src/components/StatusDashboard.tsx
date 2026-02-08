@@ -55,28 +55,28 @@ const StatusDashboard = () => {
   ];
 
   return (
-    <div className="w-full max-w-4xl mx-auto mt-8">
+    <div className="w-full max-w-4xl mx-auto mt-8 px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="aws-card p-6"
+        className="aws-card p-4 md:p-6"
       >
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
           <div className="flex items-center gap-3">
-            <FaServer className="text-[#FF9900] text-2xl" />
-            <h3 className="text-xl font-bold text-white">System Status</h3>
+            <FaServer className="text-[#FF9900] text-xl md:text-2xl" />
+            <h3 className="text-lg md:text-xl font-bold text-white">System Status</h3>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-            <span className="text-sm text-green-400 font-semibold">All Systems Operational</span>
+            <span className="text-xs md:text-sm text-green-400 font-semibold">All Systems Operational</span>
           </div>
         </div>
 
         {/* Metrics Grid */}
-        <div className="grid md:grid-cols-3 gap-4 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mb-6">
           {/* CPU Usage */}
           <div className="bg-black/30 border border-white/10 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
@@ -122,14 +122,14 @@ const StatusDashboard = () => {
         </div>
 
         {/* Uptime & Services */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {/* Uptime */}
           <div className="bg-black/20 border border-white/10 rounded-lg p-4">
             <div className="flex items-center gap-2 mb-3">
               <FaClock className="text-[#FF9900]" />
-              <span className="text-sm text-gray-400 font-semibold">System Uptime</span>
+              <span className="text-xs md:text-sm text-gray-400 font-semibold">System Uptime</span>
             </div>
-            <div className="text-3xl font-bold text-white font-mono">
+            <div className="text-2xl md:text-3xl font-bold text-white font-mono">
               {formatUptime(uptime)}
             </div>
             <p className="text-xs text-gray-500 mt-2">99.9% uptime this month</p>
@@ -139,7 +139,7 @@ const StatusDashboard = () => {
           <div className="bg-black/20 border border-white/10 rounded-lg p-4">
             <div className="flex items-center gap-2 mb-3">
               <FaCheckCircle className="text-green-400" />
-              <span className="text-sm text-gray-400 font-semibold">Service Health</span>
+              <span className="text-xs md:text-sm text-gray-400 font-semibold">Service Health</span>
             </div>
             <div className="space-y-2">
               {services.map((service, idx) => (
@@ -148,7 +148,7 @@ const StatusDashboard = () => {
                     <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
                     <span className="text-gray-300">{service.name}</span>
                   </div>
-                  <span className="text-gray-500">{service.region}</span>
+                  <span className="text-gray-500 text-[10px] md:text-xs">{service.region}</span>
                 </div>
               ))}
             </div>

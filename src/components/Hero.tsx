@@ -19,7 +19,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <Section id="home" className="pt-32 pb-20">
+    <Section id="home" className="pt-24 md:pt-32 pb-12 md:pb-20 px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -27,34 +27,34 @@ const Hero = () => {
         className="relative z-10 max-w-6xl mx-auto"
       >
         {/* AWS-Style Status Badge */}
-        <div className="flex items-center gap-2 mb-8 w-fit mx-auto">
+        <div className="flex items-center gap-2 mb-6 md:mb-8 w-fit mx-auto">
           <div className="aws-badge flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-[#FF9900]"></div>
-            <span>System Online</span>
+            <span className="text-xs md:text-sm">System Online</span>
           </div>
         </div>
 
         <div className="text-center">
-          <h2 className="text-sm text-gray-400 mb-6 tracking-wider uppercase">
+          <h2 className="text-xs md:text-sm text-gray-400 mb-4 md:mb-6 tracking-wider uppercase">
             {text}<span className="animate-blink">_</span>
           </h2>
           
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight px-2">
           Cloud Engineer (AWS) building <span className="text-[#FF9900]">scalable, secure & cost-optimized</span> cloud systems
         </h1>
 
-          <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed px-4">
           I design production-grade AWS architectures using <span className="text-[#FF9900] font-semibold">Terraform, Docker, Kubernetes & Serverless</span> to deliver high-performance systems.
         </p>
 
-          <div className="flex flex-wrap gap-4 justify-center mb-16">
-          <a href="#projects" className="aws-btn-primary">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mb-12 md:mb-16 px-4">
+          <a href="#projects" className="aws-btn-primary text-sm md:text-base">
             🚀 View Projects
           </a>
-          <a href="/resume.pdf" download className="aws-btn-secondary">
+          <a href="/resume.pdf" download className="aws-btn-secondary text-sm md:text-base">
             📄 Download Resume
           </a>
-          <a href="#contact" className="aws-btn-secondary">
+          <a href="#contact" className="aws-btn-secondary text-sm md:text-base">
             💬 Hire Me
           </a>
         </div>
